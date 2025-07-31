@@ -30,17 +30,78 @@ describe('addresses', () => {
 
     it('should return the correct address for optimism sepolia', () => {
       const address = SWAP_ROUTER_02_ADDRESSES(ChainId.OPTIMISM_SEPOLIA)
-      expect(address).toEqual('0x94cC0AaC535CCDB3C01d6787D6413C739ae12bc4')
+      expect(address).toEqual('0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c')
     })
 
     it('should return the correct address for sepolia', () => {
       const address = SWAP_ROUTER_02_ADDRESSES(ChainId.SEPOLIA)
-      expect(address).toEqual('0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E')
+      expect(address).toEqual('0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c')
     })
 
-    it('should return the correct address for bast', () => {
+    it('should return the correct address for blast', () => {
       const address = SWAP_ROUTER_02_ADDRESSES(ChainId.BLAST)
       expect(address).toEqual('0x549FEB8c9bd4c12Ad2AB27022dA12492aC452B66')
+    })
+
+    // New network tests
+    it('should return the correct address for shibarium', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.SHIBARIUM)
+      expect(address).toEqual('0xd0d020fd91aB1Ab2CbbdbfBde2Fd9C5e4D5896b8')
+    })
+
+    it('should return the correct address for puppynet', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.PUPPYNET)
+      expect(address).toEqual('0xE1052C93D344daAE1352609D464f91945fF50b14')
+    })
+
+    it('should return the correct address for BNB testnet', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.BNB_TESTNET)
+      expect(address).toEqual('0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c')
+    })
+
+    it('should return the correct address for base sepolia', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.BASE_SEPOLIA)
+      expect(address).toEqual('0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c')
+    })
+
+    it('should return the correct address for polygon amoy', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.POLYGON_AMOY)
+      expect(address).toEqual('0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c')
+    })
+
+    it('should return the correct address for scroll sepolia', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.SCROLL_SEPOLIA)
+      expect(address).toEqual('0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c')
+    })
+
+    it('should return the correct address for linea sepolia', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.LINEA_SEPOLIA)
+      expect(address).toEqual('0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c')
+    })
+
+    it('should return the correct address for gnosis chiado', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.GNOSIS_CHIADO)
+      expect(address).toEqual('0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c')
+    })
+
+    it('should return the correct address for mantle testnet', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.MANTLE_TESTNET)
+      expect(address).toEqual('0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c')
+    })
+
+    it('should return the correct address for blast sepolia', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.BLAST_SEPOLIA)
+      expect(address).toEqual('0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c')
+    })
+
+    it('should return the correct address for avalanche fuji', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(ChainId.AVALANCHE_FUJI)
+      expect(address).toEqual('0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c')
+    })
+
+    it('should return default address for unsupported chain', () => {
+      const address = SWAP_ROUTER_02_ADDRESSES(999999)
+      expect(address).toEqual('')
     })
   })
 })

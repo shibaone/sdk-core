@@ -73,17 +73,6 @@ const DEFAULT_ADDRESSES: ChainAddresses = {
   v3MigratorAddress: '0xA5644E29708357803b5A882D272c41cC0dF92B34',
   nonfungiblePositionManagerAddress: '0xC36442b4a4522E871399CD717aBDD847Ab11FE88'
 }
-
-// Testnet Addresses
-const TESTNET_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0xDeb170913657eFE6E41995A70f70454498f50a3e',
-  multicallAddress: '0xDD645f2B1f11Eb882CF64767f5d9c11d67686685',
-  quoterAddress: '0xc9e0a386aaEAfF2F2252F962B0f6D192A327AEF5',
-  v3MigratorAddress: '0xa57393Dec50D96709A42FeFd17710F49014b9Da3',
-  nonfungiblePositionManagerAddress: '0x4B985835dF460602d5C8729401829b31Bb1D895a',
-  tickLensAddress: '0x0000000000000000000000000000000000000000',
-  swapRouter02Address: '0x7BE0795F7f8273d57E0FCA94e880B75C802bf79c'
-}
 const MAINNET_ADDRESSES: ChainAddresses = {
   ...DEFAULT_ADDRESSES,
   v1MixedRouteQuoterAddress: '0x84E44095eeBfEC7793Cd7d5b57B7e401D7f1cA2E'
@@ -134,11 +123,13 @@ const OPTIMISM_GOERLI_ADDRESSES: ChainAddresses = {
 
 // optimism sepolia addresses
 const OPTIMISM_SEPOLIA_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
-}
-
-const CELO_ALFAJORES_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
+  v3CoreFactoryAddress: '0x8CE191193D15ea94e11d327b4c7ad8bbE520f6aF',
+  multicallAddress: '0x80e4e06841bb76AA9735E0448cB8d003C0EF009a',
+  quoterAddress: '0x0FBEa6cf957d95ee9313490050F6A0DA68039404',
+  v3MigratorAddress: '0xE7EcbAAaA54D007A00dbb6c1d2f150066D69dA07',
+  nonfungiblePositionManagerAddress: '0xdA75cEf1C93078e8b736FCA5D5a30adb97C8957d',
+  tickLensAddress: '0xCb7f54747F58F8944973cea5b8f4ac2209BadDC5',
+  swapRouter02Address: '0x94cC0AaC535CCDB3C01d6787D6413C739ae12bc4'
 }
 
 // arbitrum goerli v3 addresses
@@ -153,12 +144,24 @@ const ARBITRUM_GOERLI_ADDRESSES: ChainAddresses = {
 
 // arbitrum sepolia v3 addresses
 const ARBITRUM_SEPOLIA_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
+  v3CoreFactoryAddress: '0x248AB79Bbb9bC29bB72f7Cd42F17e054Fc40188e',
+  multicallAddress: '0x2B718b475e385eD29F56775a66aAB1F5cC6B2A0A',
+  quoterAddress: '0x2779a0CC1c3e0E44D2542EC3e79e3864Ae93Ef0B',
+  v3MigratorAddress: '0x398f43ef2c67B941147157DA1c5a868E906E043D',
+  nonfungiblePositionManagerAddress: '0x6b2937Bde17889EDCf8fbD8dE31C3C2a70Bc4d65',
+  tickLensAddress: '0x0fd18587734e5C2dcE2dccDcC7DD1EC89ba557d9',
+  swapRouter02Address: '0x101F443B4d1b059569D643917553c771E1b9663E'
 }
 
 // sepolia v3 addresses
 const SEPOLIA_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
+  v3CoreFactoryAddress: '0x0227628f3F023bb0B980b67D528571c95c6DaC1c',
+  multicallAddress: '0xD7F33bCdb21b359c8ee6F0251d30E94832baAd07',
+  quoterAddress: '0xEd1f6473345F45b75F8179591dd5bA1888cf2FB3',
+  v3MigratorAddress: '0x729004182cF005CEC8Bd85df140094b6aCbe8b15',
+  nonfungiblePositionManagerAddress: '0x1238536071E1c677A632429e3655c799b22cDA52',
+  tickLensAddress: '0xd7f33bcdb21b359c8ee6f0251d30e94832baad07',
+  swapRouter02Address: '0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E'
 }
 
 // Avalanche v3 addresses
@@ -232,108 +235,6 @@ const BLAST_ADDRESSES: ChainAddresses = {
   swapRouter02Address: '0x549FEB8c9bd4c12Ad2AB27022dA12492aC452B66'
 }
 
-// Shibarium addresses (V2 only for now)
-const SHIBARIUM_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0x2996B636663ddeBaE28742368ed47b57539C9600', // Actual Shibarium factory
-  multicallAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  quoterAddress: '0x9dab43E3DbEF5241f491818077E12E21b02D7035', // Actual Shibarium quoter
-  v3MigratorAddress: '0xf2eA936961c29d6737bF7DF61cC3134684447045', // Actual Shibarium migrator
-  nonfungiblePositionManagerAddress: '0x8Ab443Be082105AE444337b49E1FD8D23c2631Dc', // Actual Shibarium position manager
-  tickLensAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  swapRouter02Address: '0xd0d020fd91aB1Ab2CbbdbfBde2Fd9C5e4D5896b8' // Actual Shibarium router
-}
-
-const PUPPYNET_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0xc773468bb7c3447119f4D7AdD5B7C52401AEE43a', // Actual Puppynet factory
-  multicallAddress: '0x4AF511771B19b5c73BE920940E1a68aDA6f8CA38', // Placeholder
-  quoterAddress: '0x598728B462A37569849cce3B417d2F37F142ed49', // Actual Puppynet quoter
-  v3MigratorAddress: '0xFcEfA91D7c48b9ec104C06a1D6C0e0187f0317d4', // Actual Puppynet migrator
-  nonfungiblePositionManagerAddress: '0xb4F4cdA4687c34184a8712760c2D1E18BD8578BF', // Actual Puppynet position manager
-  tickLensAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  swapRouter02Address: '0xE1052C93D344daAE1352609D464f91945fF50b14' // Actual Puppynet router
-}
-
-// Scroll addresses
-const SCROLL_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0x0000000000000000000000000000000000000000', // Placeholder - V3 not deployed
-  multicallAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  quoterAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  v3MigratorAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  nonfungiblePositionManagerAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  tickLensAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  swapRouter02Address: '0x0000000000000000000000000000000000000000' // Placeholder
-}
-
-// Linea addresses
-const LINEA_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0x0000000000000000000000000000000000000000', // Placeholder - V3 not deployed
-  multicallAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  quoterAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  v3MigratorAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  nonfungiblePositionManagerAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  tickLensAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  swapRouter02Address: '0x0000000000000000000000000000000000000000' // Placeholder
-}
-
-// Gnosis addresses
-const GNOSIS_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0x0000000000000000000000000000000000000000', // Placeholder - V3 not deployed
-  multicallAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  quoterAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  v3MigratorAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  nonfungiblePositionManagerAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  tickLensAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  swapRouter02Address: '0x0000000000000000000000000000000000000000' // Placeholder
-}
-
-// Mantle addresses
-const MANTLE_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0x0000000000000000000000000000000000000000', // Placeholder - V3 not deployed
-  multicallAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  quoterAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  v3MigratorAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  nonfungiblePositionManagerAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  tickLensAddress: '0x0000000000000000000000000000000000000000', // Placeholder
-  swapRouter02Address: '0x0000000000000000000000000000000000000000' // Placeholder
-}
-
-// Testnet addresses (using actual addresses from constants.ts)
-const BNB_TESTNET_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
-}
-
-const BASE_SEPOLIA_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
-}
-
-const POLYGON_AMOY_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
-}
-
-const SCROLL_SEPOLIA_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
-}
-
-const LINEA_SEPOLIA_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
-}
-
-const GNOSIS_CHIADO_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
-}
-
-const MANTLE_TESTNET_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
-}
-
-const BLAST_SEPOLIA_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
-}
-
-const AVALANCHE_FUJI_ADDRESSES: ChainAddresses = {
-  ...TESTNET_ADDRESSES
-}
-
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
   [ChainId.MAINNET]: MAINNET_ADDRESSES,
   [ChainId.OPTIMISM]: OPTIMISM_ADDRESSES,
@@ -342,7 +243,7 @@ export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>
   [ChainId.POLYGON_MUMBAI]: POLYGON_ADDRESSES,
   [ChainId.GOERLI]: GOERLI_ADDRESSES,
   [ChainId.CELO]: CELO_ADDRESSES,
-  [ChainId.CELO_ALFAJORES]: CELO_ALFAJORES_ADDRESSES,
+  [ChainId.CELO_ALFAJORES]: CELO_ADDRESSES,
   [ChainId.BNB]: BNB_ADDRESSES,
   [ChainId.OPTIMISM_GOERLI]: OPTIMISM_GOERLI_ADDRESSES,
   [ChainId.OPTIMISM_SEPOLIA]: OPTIMISM_SEPOLIA_ADDRESSES,
@@ -355,24 +256,7 @@ export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>
   [ChainId.ZORA]: ZORA_ADDRESSES,
   [ChainId.ZORA_SEPOLIA]: ZORA_SEPOLIA_ADDRESSES,
   [ChainId.ROOTSTOCK]: ROOTSTOCK_ADDRESSES,
-  [ChainId.BLAST]: BLAST_ADDRESSES,
-
-  // New networks
-  [ChainId.SHIBARIUM]: SHIBARIUM_ADDRESSES,
-  [ChainId.PUPPYNET]: PUPPYNET_ADDRESSES,
-  [ChainId.SCROLL]: SCROLL_ADDRESSES,
-  [ChainId.LINEA]: LINEA_ADDRESSES,
-  [ChainId.GNOSIS]: GNOSIS_ADDRESSES,
-  [ChainId.MANTLE]: MANTLE_ADDRESSES,
-  [ChainId.BNB_TESTNET]: BNB_TESTNET_ADDRESSES,
-  [ChainId.BASE_SEPOLIA]: BASE_SEPOLIA_ADDRESSES,
-  [ChainId.POLYGON_AMOY]: POLYGON_AMOY_ADDRESSES,
-  [ChainId.SCROLL_SEPOLIA]: SCROLL_SEPOLIA_ADDRESSES,
-  [ChainId.LINEA_SEPOLIA]: LINEA_SEPOLIA_ADDRESSES,
-  [ChainId.GNOSIS_CHIADO]: GNOSIS_CHIADO_ADDRESSES,
-  [ChainId.MANTLE_TESTNET]: MANTLE_TESTNET_ADDRESSES,
-  [ChainId.BLAST_SEPOLIA]: BLAST_SEPOLIA_ADDRESSES,
-  [ChainId.AVALANCHE_FUJI]: AVALANCHE_FUJI_ADDRESSES
+  [ChainId.BLAST]: BLAST_ADDRESSES
 }
 
 /* V3 Contract Addresses */

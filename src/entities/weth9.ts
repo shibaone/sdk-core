@@ -25,21 +25,5 @@ export const WETH9: { [chainId: number]: Token } = {
   [43114]: new Token(43114, '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7', 18, 'WAVAX', 'Wrapped AVAX'),
 
   [157]: new Token(157, '0x41c3F37587EBcD46C0F85eF43E38BcfE1E70Ab56', 18, 'WBONE', 'Wrapped Bone'),
-  [109]: new Token(109, '0xC76F4c819D820369Fb2d7C1531aB3Bb18e6fE8d8', 18, 'WBONE', 'Wrapped Bone'),
-
-  // New networks - adding actual addresses from constants.ts
-  [97]: new Token(97, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'), // BNB Testnet
-  [84532]: new Token(84532, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped Ether'), // Base Sepolia
-  [80002]: new Token(80002, '0x0000000000000000000000000000000000000000', 18, 'WMATIC', 'Wrapped MATIC'), // Polygon Amoy - placeholder
-  [534351]: new Token(534351, '0x0000000000000000000000000000000000000000', 18, 'WETH', 'Wrapped Ether'), // Scroll Sepolia - placeholder
-  [59141]: new Token(59141, '0x0000000000000000000000000000000000000000', 18, 'WETH', 'Wrapped Ether'), // Linea Sepolia - placeholder
-  [44787]: new Token(44787, '0x0000000000000000000000000000000000000000', 18, 'WCELO', 'Wrapped CELO'), // Celo Alfajores - placeholder
-  [10200]: new Token(10200, '0x0000000000000000000000000000000000000000', 18, 'WXDAI', 'Wrapped XDAI'), // Gnosis Chiado - placeholder
-  [5003]: new Token(5003, '0x0000000000000000000000000000000000000000', 18, 'WMNT', 'Wrapped MNT'), // Mantle Testnet - placeholder
-  [168587773]: new Token(168587773, '0x0000000000000000000000000000000000000000', 18, 'WETH', 'Wrapped Ether'), // Blast Sepolia - placeholder
-  [43113]: new Token(43113, '0xd00ae08403B9bbb9124bB305C09058E32C39A48c', 18, 'WAVAX', 'Wrapped AVAX'), // Avalanche Fuji
-  [534352]: new Token(534352, '0x0000000000000000000000000000000000000000', 18, 'WETH', 'Wrapped Ether'), // Scroll - placeholder
-  [59144]: new Token(59144, '0x0000000000000000000000000000000000000000', 18, 'WETH', 'Wrapped Ether'), // Linea - placeholder
-  [100]: new Token(100, '0x0000000000000000000000000000000000000000', 18, 'WXDAI', 'Wrapped XDAI'), // Gnosis - placeholder
-  [5000]: new Token(5000, '0x0000000000000000000000000000000000000000', 18, 'WMNT', 'Wrapped MNT') // Mantle - placeholder
+  [109]: new Token(109, '0xC76F4c819D820369Fb2d7C1531aB3Bb18e6fE8d8', 18, 'WBONE', 'Wrapped Bone')
 }
